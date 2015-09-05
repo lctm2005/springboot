@@ -1,8 +1,7 @@
-package com.licong.springboot.repository;
+package com.licong.springboot.domain;
 
-import com.licong.springboot.repository.bean.GlobalConfig;
+import com.licong.springboot.domain.bean.GlobalConfig;
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

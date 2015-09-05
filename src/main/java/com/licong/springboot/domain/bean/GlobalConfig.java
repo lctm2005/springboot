@@ -1,4 +1,4 @@
-package com.licong.springboot.repository.bean;
+package com.licong.springboot.domain.bean;
 
 import lombok.Data;
 
@@ -18,7 +18,7 @@ public class GlobalConfig {
     @GeneratedValue
     private Long id;
 
-    @Column(nullable = false)
+    @Column( nullable = false)
     private String configKey;
 
     @Column(nullable = false)
