@@ -1,4 +1,4 @@
-package com.licong.springboot.repository.bean;
+package com.licong.springboot.domain.bean;
 
 import lombok.Data;
 
@@ -9,7 +9,8 @@ import javax.persistence.*;
  * @date 15-8-17
  */
 @Data
-public class Department {
+@Entity
+public class User {
 
     @Id
     @GeneratedValue
@@ -18,8 +19,7 @@ public class Department {
     @Column(nullable = false)
     private String name;
 
-    @JoinColumn(name = "parent_id")
+    @JoinColumn(name = "department_id")
     @OneToOne
-    private Department parent;
-
+    private Department department;
 }
