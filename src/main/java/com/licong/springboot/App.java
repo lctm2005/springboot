@@ -2,6 +2,7 @@ package com.licong.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        SpringApplication springApplication = new SpringApplication(App.class);
-        springApplication.run(App.class, args);
+        SpringApplication.run(App.class, args);
     }
 }
