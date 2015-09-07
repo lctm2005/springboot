@@ -9,6 +9,7 @@ import javax.persistence.*;
  * @date 15-8-17
  */
 @Data
+@Entity
 public class Department {
 
     @Id
