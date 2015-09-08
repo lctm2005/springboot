@@ -7,8 +7,10 @@
     <artifactId>springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
+    <!--<packaging>war</packaging>-->
+
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>1.7</java.version>
         <spring.boot.version>1.2.5.RELEASE</spring.boot.version>
     </properties>
 
@@ -54,6 +56,18 @@
             <artifactId>spring-boot-starter-logging</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-devtools</artifactId>-->
@@ -63,12 +77,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.6</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
