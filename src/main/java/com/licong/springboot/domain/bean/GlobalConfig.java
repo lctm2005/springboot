@@ -20,10 +20,8 @@ public class GlobalConfig {
     @GeneratedValue
     private Integer id;
 
-    @Column(nullable = false)
     private String configKey;
 
-    @Column(nullable = false)
     private String configValue;
 
     @Column(updatable = false)
