@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 //@Controller
 @RestController
 @RequestMapping(value = "/users")
-public class MyRestController {
+public class UserController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public User get(@PathVariable Long id) {
