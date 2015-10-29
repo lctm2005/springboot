@@ -21,6 +21,7 @@ public class WelcomeController {
         model.put("time", new Date());
         model.put("message", this.message);
         HttpSession httpSession =  request.getSession();
+        httpSession.setAttribute("name","licong");
         return "welcome";
     }
 }

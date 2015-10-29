@@ -12,6 +12,8 @@ Spring URL: ${springUrl} at ${time}
 JSTL URL: ${url}
 <br>
 Message: ${message}
+<br>
+Name:${name}
 </body>
 
 </html>
