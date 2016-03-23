@@ -19,7 +19,6 @@ public class Department {
     @Column(nullable = false)
     private String name;
 
-    @JoinColumn(name = "parent_id")
     @OneToOne
     private Department parent;
 

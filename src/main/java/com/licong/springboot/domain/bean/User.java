@@ -19,7 +19,6 @@ public class User {
     @Column(nullable = false)
     private String name;
 
-    @JoinColumn(name = "department_id")
     @OneToOne
     private Department department;
 }

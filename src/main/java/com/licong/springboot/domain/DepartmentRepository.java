@@ -10,6 +10,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
  * @date 15-8-17
  */
 @RestResource
-@RepositoryRestResource(collectionResourceRel = "department", path = "department")
+@RepositoryRestResource(collectionResourceRel = "departments", path = "departments")
 public interface DepartmentRepository extends PagingAndSortingRepository<Department, Integer> {
 }
