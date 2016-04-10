@@ -1,6 +1,6 @@
-package com.licong.springboot.repository;
+package com.licong.springboot.domain;
 
-import com.licong.springboot.repository.bean.GlobalConfig;
+import com.licong.springboot.domain.bean.GlobalConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;

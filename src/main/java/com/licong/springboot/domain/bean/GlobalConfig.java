@@ -1,4 +1,4 @@
-package com.licong.springboot.repository.bean;
+package com.licong.springboot.domain.bean;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
@@ -20,13 +20,11 @@ public class GlobalConfig {
     @GeneratedValue
     private Integer id;
 
-    @Column(nullable = false)
     private String configKey;
 
-    @Column(nullable = false)
     private String configValue;
 
-    @Column
+    @Column(updatable = false)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 }

@@ -1,6 +1,6 @@
-package com.licong.springboot.repository;
+package com.licong.springboot.domain;
 
-import com.licong.springboot.repository.bean.Department;
+import com.licong.springboot.domain.bean.Department;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
@@ -10,6 +10,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
  * @date 15-8-17
  */
 @RestResource
-@RepositoryRestResource(collectionResourceRel = "department", path = "department")
+@RepositoryRestResource(collectionResourceRel = "departments", path = "departments")
 public interface DepartmentRepository extends PagingAndSortingRepository<Department, Integer> {
 }
