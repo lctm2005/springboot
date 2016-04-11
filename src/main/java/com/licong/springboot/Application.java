@@ -17,6 +17,8 @@ public class Application extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(Application.class, args);
+        SpringApplication springApplication = new SpringApplicationBuilder().build();
+        springApplication.setWebEnvironment(true);
+        springApplication.run(Application.class, args);
     }
 }
