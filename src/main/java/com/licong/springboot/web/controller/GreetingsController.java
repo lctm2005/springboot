@@ -1,4 +1,4 @@
-package com.licong.springboot.web;
+package com.licong.springboot.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.metrics.CounterService;
