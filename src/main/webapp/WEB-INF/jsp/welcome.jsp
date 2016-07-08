@@ -6,7 +6,7 @@
 <html lang="en">
 
 <body>
-Name:${name}
+${message},${name}
 </body>
 
 </html>

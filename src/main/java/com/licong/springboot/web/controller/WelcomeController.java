@@ -12,8 +12,9 @@ import java.util.Date;
 @Controller
 public class WelcomeController {
 
+    // ":" 后面表示当读取不到配置时使用的默认值
     @Value("${application.message:Hello World}")
-    private String message = "Hello World";
+    private String message;
 
     @RequestMapping("/")
     public ModelAndView welcome(HttpServletRequest request) {
@@ -21,7 +22,6 @@ public class WelcomeController {
         httpSession.setAttribute("name", "licong");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("welcome");
-        modelAndView.addObject("time", new Date());
         modelAndView.addObject("message", this.message);
         return modelAndView;
     }

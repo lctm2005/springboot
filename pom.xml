@@ -36,6 +36,7 @@
 
     <!-- Add typical dependencies for a web application -->
     <dependencies>
+        <!-- session -->
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session</artifactId>
@@ -44,16 +45,20 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
         </dependency>
+
+        <!-- security -->
         <!--<dependency>-->
         <!--<groupId>org.springframework.boot</groupId>-->
         <!--<artifactId>spring-boot-starter-security</artifactId>-->
         <!--</dependency>-->
+
+        <!-- web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- jsp need outside tomcat -->
+        <!-- jsp -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -122,16 +127,6 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
-        </dependency>
-
-        <!-- session -->
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
         </dependency>
     </dependencies>
 
