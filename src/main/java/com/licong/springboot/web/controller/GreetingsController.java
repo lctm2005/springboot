@@ -1,10 +1,11 @@
 package com.licong.springboot.web.controller;
 
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.boot.actuate.trace.TraceRepository;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,12 +22,15 @@ public class GreetingsController {
     @Autowired
     private TraceRepository traceRepository;
 
-    @RequestMapping("/greet")
-    public String greet() {
-        counterService.increment("myapp.greet.count");
-        Map<String,Object> trace = new HashMap<>();
-        trace.put("mystrace", "XXX");
-        traceRepository.add(trace);
-        return "Hello!";
+    @RequestMapping(value = "/v1/greet/{name}", method = RequestMethod.GET)
+    public GreetingContent greet(@PathVariable("name") String name, @RequestParam Integer times, @RequestBody GreetingContent content) {
+//        counterService.increment("myapp.greet.count");
+//        Map<String, Object> trace = new HashMap<>();
+//        trace.put("mystrace", "XXX");
+//        traceRepository.add(trace);
+        GreetingContent greetingContent = new GreetingContent();
+        greetingContent.setGreetingWay(content.getGreetingWay());
+        greetingContent.setGreetingContent("Hello " + name + ",I have received your greeting[" + content + "] " + times + " times!");
+        return greetingContent;
     }
 }
